@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notice Board & Exam Schedule</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="public-container">
+        <!-- Header -->
+        <header class="header">
+            <div class="container">
+                <h1>📢 Notice Board & Exam Schedule</h1>
+                <p>Stay updated with latest announcements and exam dates</p>
+                <a href="admin.html" class="admin-link">Admin Login</a>
+            </div>
+        </header>
+
+        <!-- Notices Section -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>🔔 Important Notices</h2>
+                </div>
+                <div id="noticesList" class="notices-list">
+                    <p class="empty-message">Loading notices...</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Exams Section -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>📅 Upcoming Exams</h2>
+                </div>
+                <div id="examsList" class="exams-list">
+                    <p class="empty-message">Loading exams...</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <p>&copy; 2024 Notice & Exam System. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Supabase SDK -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    
+    <!-- Your Scripts -->
+    <script src="js/config.js"></script>
+    <script src="js/public.js"></script>
+</body>
+</html>

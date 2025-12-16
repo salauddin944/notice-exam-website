@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Login Screen -->
+    <div id="loginScreen" class="login-screen">
+        <div class="login-box">
+            <h2>🔐 Admin Login</h2>
+            <input type="password" id="passwordInput" placeholder="Enter password" class="input-field">
+            <button onclick="login()" class="btn btn-primary">Login</button>
+            <p class="hint">Default password: admin123</p>
+            <a href="index.html" class="back-link">← Back to Public View</a>
+        </div>
+    </div>
+
+    <!-- Admin Dashboard -->
+    <div id="adminDashboard" class="admin-dashboard" style="display: none;">
+        <!-- Header -->
+        <header class="admin-header">
+            <div class="container">
+                <div class="header-content">
+                    <div>
+                        <h1>⚙️ Admin Dashboard</h1>
+                        <p>Manage notices and exam schedules</p>
+                    </div>
+                    <div class="header-actions">
+                        <a href="index.html" class="btn btn-secondary">View Public Page</a>
+                        <button onclick="logout()" class="btn btn-danger">Logout</button>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="container admin-content">
+            <!-- Add Notice Section -->
+            <section class="admin-section">
+                <h2>📝 Add New Notice</h2>
+                <div class="form-group">
+                    <textarea id="noticeInput" placeholder="Enter notice text..." class="textarea-field" rows="3"></textarea>
+                    <button onclick="addNotice()" class="btn btn-success">➕ Add Notice</button>
+                </div>
+            </section>
+
+            <!-- Manage Notices -->
+            <section class="admin-section">
+                <h2>📋 Manage Notices</h2>
+                <div id="adminNoticesList" class="admin-list">
+                    <p class="empty-message">Loading notices...</p>
+                </div>
+            </section>
+
+            <!-- Add Exam Section -->
+            <section class="admin-section">
+                <h2>📚 Add New Exam</h2>
+                <div class="form-row">
+                    <input type="text" id="examNameInput" placeholder="Exam name" class="input-field">
+                    <input type="date" id="examDateInput" class="input-field">
+                    <input type="time" id="examTimeInput" class="input-field">
+                    <button onclick="addExam()" class="btn btn-success">➕ Add Exam</button>
+                </div>
+            </section>
+
+            <!-- Manage Exams -->
+            <section class="admin-section">
+                <h2>📖 Manage Exams</h2>
+                <div id="adminExamsList" class="admin-list">
+                    <p class="empty-message">Loading exams...</p>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- Supabase SDK -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    
+    <!-- Your Scripts -->
+    <script src="js/config.js"></script>
+    <script src="js/admin.js"></script>
+</body>
+</html>
