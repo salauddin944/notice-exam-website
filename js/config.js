@@ -8,4 +8,5 @@ const SUPABASE_KEY = 'sb_publishable_oiEgTCW9zHFjXyuwdoQ-bQ_ouLWk569';
 const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 
 // Admin password - change this!
-const ADMIN_PASSWORD = 'admin123';
+
+const ADMIN_PASSWORD = '@123Ad';
