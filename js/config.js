@@ -9,4 +9,5 @@ const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 
 // Admin password - change this!
 
-const ADMIN_PASSWORD = '@123Ad';
+const ADMIN_PASSWORD = '54321';
+
